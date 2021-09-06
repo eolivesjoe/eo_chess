@@ -1,50 +1,63 @@
 
 #include "Attack.h"
 
-Attack::Attack() {
+Attack::Attack()
+{
 
 }
 
-Attack::~Attack() {
+Attack::~Attack() 
+{
 
 }
 
-bool Attack::squareAttacked(const int square, const int side, STRUCT_BOARD_STATE* boardState, Pieces* pieces) {
+bool Attack::squareAttacked(const int square, const int side, STRUCT_BOARD_STATE* boardState, Pieces* pieces) 
+{
     bool outcome = false;
 
     // pawns
-    if (side == WHITE) {
-        if (boardState->pieces[square - 11] == wP || boardState->pieces[square - 9] == wP) {
+    if (side == WHITE) 
+    {
+        if (boardState->pieces[square - 11] == wP || boardState->pieces[square - 9] == wP)
+        {
             outcome = true;
         }
     }
-    else {
-        if (boardState->pieces[square + 11] == bP || boardState->pieces[square + 9] == bP) {
+    else 
+    {
+        if (boardState->pieces[square + 11] == bP || boardState->pieces[square + 9] == bP) 
+        {
             outcome = true;
         }
     }
 
     // knights
-    for (int i = 0; i != 8; ++i) {
+    for (int i = 0; i != 8; ++i) 
+    {
         int piece = boardState->pieces[square + this->knightSquares[i]];
 
-        if (square != NO_SQUARE) {
+        if (square != NO_SQUARE) 
+        {
             if (pieces->getPieceColour()[piece] == side && pieces->getPieceKnight()[piece])
                 outcome = true;
         }
     }
 
     // bishop, queen
-    for (int i = 0; i != 4; ++i) {
+    for (int i = 0; i != 4; ++i) 
+    {
         int direction = this->bishopSquares[i];
         int tempSquare = square + direction;
         int piece = boardState->pieces[tempSquare];
         bool pathBlocked = false;
 
-        while (piece != NO_SQUARE && !pathBlocked) {
+        while (piece != NO_SQUARE && !pathBlocked) 
+        {
 
-            if (piece != NO_PIECE) {
-                if (pieces->getPieceBishopOrQueen()[piece] && pieces->getPieceColour()[piece] == side) {
+            if (piece != NO_PIECE) 
+            {
+                if (pieces->getPieceBishopOrQueen()[piece] && pieces->getPieceColour()[piece] == side)
+                {
                     outcome = true;
                 }
                 pathBlocked = true;
@@ -55,16 +68,20 @@ bool Attack::squareAttacked(const int square, const int side, STRUCT_BOARD_STATE
     }
 
     // rook, queen
-    for (int i = 0; i != 4; ++i) {
+    for (int i = 0; i != 4; ++i)
+    {
         int direction = this->rookSquares[i];
         int tempSquare = square + direction;
         int piece = boardState->pieces[tempSquare];
         bool pathBlocked = false;
 
-        while (piece != NO_SQUARE && !pathBlocked) {
+        while (piece != NO_SQUARE && !pathBlocked) 
+        {
 
-            if (piece != NO_PIECE) {
-                if (pieces->getPieceRookOrQueen()[piece] && pieces->getPieceColour()[piece] == side) {
+            if (piece != NO_PIECE) 
+            {
+                if (pieces->getPieceRookOrQueen()[piece] && pieces->getPieceColour()[piece] == side) 
+                {
                     outcome = true;
                 }
                 pathBlocked = true;
@@ -75,11 +92,14 @@ bool Attack::squareAttacked(const int square, const int side, STRUCT_BOARD_STATE
     }
 
     // king
-    for (int i = 0; i != 8; ++i) {
+    for (int i = 0; i != 8; ++i)
+    {
         int piece = boardState->pieces[square + this->kingSquares[i]];
 
-        if (square != NO_SQUARE) {
-            if (pieces->getPieceColour()[piece] == side && pieces->getPieceKing()[piece]) {
+        if (square != NO_SQUARE)
+        {
+            if (pieces->getPieceColour()[piece] == side && pieces->getPieceKing()[piece]) 
+            {
                 outcome = true;
             }
         }

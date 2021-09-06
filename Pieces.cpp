@@ -1,43 +1,53 @@
 
 #include "Pieces.h"
 
-Pieces::Pieces() {
+Pieces::Pieces() 
+{
 
 }
 
-Pieces::~Pieces() {
+Pieces::~Pieces() 
+{
 
 }
 
 // getters
-int* Pieces::getPieceBig() {
+int* Pieces::getPieceBig() 
+{
     return this->pieceBig;
 }
 
-int* Pieces::getPieceMajor() {
+int* Pieces::getPieceMajor() 
+{
     return this->pieceMajor;
 }
 
-int* Pieces::getPieceMinor() {
+int* Pieces::getPieceMinor() 
+{
     return this->pieceMinor;
 }
 
-int* Pieces::getPieceColour() {
+int* Pieces::getPieceColour() 
+{
     return this->pieceColour;
 }
 
-int* Pieces::getPieceKnight() {
+int* Pieces::getPieceKnight() 
+{
     return this->pieceKnight;
 }
 
-int* Pieces::getPieceBishopOrQueen() {
+int* Pieces::getPieceBishopOrQueen() 
+{
     return this->pieceBishopOrQueen;
 }
 
-int* Pieces::getPieceRookOrQueen() {
+int* Pieces::getPieceRookOrQueen() 
+{
     return this->pieceRookOrQueen;
 }
 
-int* Pieces::getPieceKing() {
+int* Pieces::getPieceKing() 
+{
     return this->pieceKing;
 }

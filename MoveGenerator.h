@@ -4,7 +4,8 @@
 
 #include "Definitions.h"
 
-class MoveGenerator {
+class MoveGenerator 
+{
 public:
 
     MoveGenerator();

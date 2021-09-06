@@ -20,7 +20,8 @@
 #define PIECE_NUMBER 10
 
 // board ranks
-enum boardRanks {
+enum boardRanks 
+{
     RANK_1,
     RANK_2,
     RANK_3,
@@ -33,7 +34,8 @@ enum boardRanks {
 };
 
 // board files
-enum boardFiles {
+enum boardFiles 
+{
     FILE_A,
     FILE_B,
     FILE_C,
@@ -46,7 +48,8 @@ enum boardFiles {
 };
 
 //pieces
-enum boardPieces {
+enum boardPieces 
+{
     NO_PIECE,
     wP,
     wN,
@@ -63,14 +66,16 @@ enum boardPieces {
 };
 
 // piece colours
-enum pieceColours {
+enum pieceColours 
+{
     WHITE,
     BLACK,
     BOTH
 };
 
 //board squares
-enum squares {
+enum squares 
+{
     A1 = 21, B1, C1, D1, E1, F1, G1, H1,
     A2 = 31, B2, C2, D2, E2, F2, G2, H2,
     A3 = 41, B3, C3, D3, E3, F3, G3, H3,
@@ -82,7 +87,8 @@ enum squares {
     NO_SQUARE
 };
 
-enum castling {
+enum castling 
+{
     wKCastling = 1,
     wQCastling = 2,
     bKCastling = 4,

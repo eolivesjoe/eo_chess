@@ -3,7 +3,8 @@
 
 #include "Definitions.h"
 
-class BitBoard {
+class BitBoard 
+{
 public:
 
     BitBoard();

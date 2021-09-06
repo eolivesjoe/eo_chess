@@ -7,7 +7,8 @@
 #include "Pieces.h"
 #include "BitBoard.h"
 
-class Board {
+class Board 
+{
 public:
 
     Board();

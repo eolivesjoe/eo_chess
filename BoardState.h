@@ -5,8 +5,8 @@
 #include "Definitions.h"
 
 // struct for undo move
-struct STRUCT_UNDO_MOVE {
-
+struct STRUCT_UNDO_MOVE 
+{
     // board move
     int move;
 
@@ -23,10 +23,9 @@ struct STRUCT_UNDO_MOVE {
     U64 positionKey;
 };
 
-
 // general board struct
-struct  STRUCT_BOARD_STATE {
-
+struct  STRUCT_BOARD_STATE 
+{
     // store value of the board
     int pieces[SQ_120];
 

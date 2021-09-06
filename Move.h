@@ -8,8 +8,8 @@
 #define moveFlagCapture 0x7C000
 #define moveFlagPromotion 0xF00000
 
-struct STRUCT_MOVE {
-
+struct STRUCT_MOVE 
+{
     int move;
     int moveScore;
 
@@ -24,7 +24,6 @@ struct STRUCT_MOVE {
 
     // was a piece promoted
     int promoted(int move);
-
 };
 
 /*

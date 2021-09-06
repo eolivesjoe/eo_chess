@@ -20,7 +20,8 @@ int main(int argc, char const* argv[])
     return 0;
 }
 
-void run() {
+void run() 
+{
     STRUCT_BOARD_STATE* state = new STRUCT_BOARD_STATE();
     Board* board = new Board();
     HashKey* key = new HashKey();

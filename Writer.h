@@ -9,7 +9,8 @@
 #include "Pieces.h"
 #include "Move.h"
 
-class Writer {
+class Writer 
+{
 public:
 
     Writer();

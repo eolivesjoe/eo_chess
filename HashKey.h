@@ -6,7 +6,8 @@
 #include "Definitions.h"
 #include "BoardState.h"
 
-class HashKey {
+class HashKey 
+{
 public:
 
     HashKey();

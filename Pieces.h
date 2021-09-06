@@ -3,7 +3,8 @@
 
 #include "Definitions.h"
 
-class Pieces {
+class Pieces 
+{
 public:
 
     Pieces();
@@ -19,7 +20,6 @@ public:
     int* getPieceBishopOrQueen();
     int* getPieceRookOrQueen();
     int* getPieceKing();
-
 
 private:
 

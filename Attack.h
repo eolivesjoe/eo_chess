@@ -4,13 +4,14 @@
 #include "BoardState.h"
 #include "Pieces.h"
 
-class Attack {
-
+class Attack 
+{
 public:
     Attack();
 
     ~Attack();
 
+    // Return if square is attacked or not
     bool squareAttacked(const int square, const int side, STRUCT_BOARD_STATE* boardState, Pieces* pieces);
 
 private:

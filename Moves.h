@@ -7,10 +7,10 @@
 
 
 // struct to store moves
-struct STRUCT_MOVES {
+struct STRUCT_MOVES 
+{
     STRUCT_MOVE moves[MAX_POSITION_MOVES];
     int count;
 };
-
 
 #endif //MOVES_H
