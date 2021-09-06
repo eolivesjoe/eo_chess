@@ -1,3 +1,6 @@
+/*  BoardState.h
+    Used for all information relevant to the current board state
+*/
 
 #ifndef BOARDSTATE_H
 #define BOARDSTATE_H

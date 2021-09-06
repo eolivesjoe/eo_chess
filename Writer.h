@@ -8,6 +8,7 @@
 #include "Attack.h"
 #include "Pieces.h"
 #include "Move.h"
+#include "Moves.h"
 
 class Writer 
 {
@@ -36,9 +37,8 @@ public:
     // print move made
     char* printMove(const int move, STRUCT_MOVE* m, Board* board, Pieces* pieces);
 
-    // print header
-    void printHeader();
-
+    // print move list
+    void printMoveList(STRUCT_MOVELIST* moveList, STRUCT_MOVE* m, Board* board, Pieces* pieces);
 
 private:
 

@@ -3,6 +3,7 @@
 
 #include "BoardState.h"
 #include "Pieces.h"
+#include "Board.h"
 
 class Attack 
 {
@@ -12,7 +13,7 @@ public:
     ~Attack();
 
     // Return if square is attacked or not
-    bool squareAttacked(const int square, const int side, STRUCT_BOARD_STATE* boardState, Pieces* pieces);
+    bool squareAttacked(Board* board, const int square, const int side, STRUCT_BOARD_STATE* boardState, Pieces* pieces);
 
 private:
 

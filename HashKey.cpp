@@ -1,3 +1,6 @@
+/*  HashKey.cpp
+    Used to generate a hash key for every board position used
+*/
 
 #include <iostream>
 

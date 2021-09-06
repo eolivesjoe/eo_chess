@@ -1,5 +1,9 @@
+/*  Attack.cpp
+    Store functions to calculate which squares are under attack
+*/
 
 #include "Attack.h"
+#include "Utility.h"
 
 Attack::Attack()
 {
@@ -11,9 +15,15 @@ Attack::~Attack()
 
 }
 
-bool Attack::squareAttacked(const int square, const int side, STRUCT_BOARD_STATE* boardState, Pieces* pieces) 
+bool Attack::squareAttacked(Board* board, const int square, const int side, STRUCT_BOARD_STATE* boardState, Pieces* pieces) 
 {
     bool outcome = false;
+
+    // checks
+    isSquareOnBoard(board->getFileOnBoard()[square]);
+    isSideValid(side);
+    board->checkBoard(boardState, pieces);
+    
 
     // pawns
     if (side == WHITE) 

@@ -1,3 +1,6 @@
+/*  Board.cpp
+    Used for all functions that deals with the board. Setting up File and Ranks etc..
+*/
 
 #include <iostream>
 #include <iomanip>

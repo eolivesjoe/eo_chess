@@ -1,3 +1,6 @@
+/*  Pieces.cpp
+    Store all relevant information about the pieces
+*/
 
 #include "Pieces.h"
 

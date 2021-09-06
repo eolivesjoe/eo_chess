@@ -1,3 +1,6 @@
+/*  BitBoard.cpp
+    Used for the bitboards used by the pawns
+*/
 
 #include <iostream>
 

@@ -1,3 +1,7 @@
+/*  Writer.cpp
+    All functions that prints things are stored here
+*/
+
 
 // TODO
 // supressed for sprintf
@@ -115,8 +119,8 @@ void Writer::printBoard(Board* board, STRUCT_BOARD_STATE* state)
         if (rank == RANK_1) 
         {
             std::cout << "\n";
-
             std::cout << "  ";
+
             for (file = FILE_A; file <= FILE_H; ++file) 
             {
                 std::cout << std::setw(3) << fileChar[file];
@@ -138,7 +142,7 @@ void Writer::printAttackedSquares(Board* board, const int side, STRUCT_BOARD_STA
         {
             square = board->fileAndRankToBoard120Index(file, rank);
 
-            if (attack->squareAttacked(square, side, state, pieces)) 
+            if (attack->squareAttacked(board, square, side, state, pieces)) 
             {
                 std::cout << std::setw(3) << "X";
             }
@@ -201,17 +205,14 @@ char* Writer::printMove(const int move, STRUCT_MOVE* m, Board* board, Pieces* pi
     return moveString;
 }
 
-
-
-void Writer::printHeader() 
+void Writer::printMoveList(STRUCT_MOVELIST* moveList, STRUCT_MOVE* m, Board* board, Pieces* pieces)
 {
-    std::cout << R"(
-        __          __  _                            _                      _____ _                   
-        \ \        / / | |                          | |                    / ____| |                  
-         \ \  /\  / /__| | ___ ___  _ __ ___   ___  | |_ ___     ___  ___ | |    | |__   ___  ___ ___ 
-          \ \/  \/ / _ \ |/ __/ _ \| '_ ` _ \ / _ \ | __/ _ \   / _ \/ _ \| |    | '_ \ / _ \/ __/ __|
-           \  /\  /  __/ | (_| (_) | | | | | |  __/ | || (_) | |  __/ (_) | |____| | | |  __/\__ \__ \
-            \/  \/ \___|_|\___\___/|_| |_| |_|\___|  \__\___/   \___|\___/ \_____|_| |_|\___||___/___/
-                                                                                               
-    )" << "\n";
+    for (int i = 0; i != moveList->count; ++i)
+    {
+        int move = moveList->moves[i].move;
+        int score = moveList->moves[i].moveScore;
+
+        std::cout << "Move: " << i << " < " << printMove(move, m, board, pieces) << " score: " << score << "\n";
+    }
+    std::cout << "Total moves: " << moveList->count << "\n";
 }

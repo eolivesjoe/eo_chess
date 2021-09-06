@@ -1,3 +1,6 @@
+/*  Main.cpp
+    Main entry point of the program
+*/
 
 #include <iostream>
 #include <iomanip>
@@ -42,8 +45,6 @@ void run()
     // const char* queenAttackCheck = "8/8/3q4/8/8/3Q4/8/8 w KQkq - 0 1";
     // const char* kingAttackCheck = "8/8/3k4/8/8/3K4/8/8 w KQkq - 0 1";
     const char* blockTest = "8/3q1p2/8/3Q1P2/8/8/8/8 w KQkq - 0 1";
-
-    w->printHeader();
 
     std::cout << "STANDARD BOARD\n";
     board->readFENString(blockTest, state, key, pieces, bitboard);

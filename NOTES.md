@@ -133,6 +133,10 @@
 
     Updated some formatting
 
+    Added some checks in utility.h
+
+    Time to start move generation
+
  
 ## future goals / notes:
 

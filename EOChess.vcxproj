@@ -161,7 +161,6 @@
     <ClInclude Include="Moves.h" />
     <ClInclude Include="Pieces.h" />
     <ClInclude Include="Utility.h" />
-    <ClInclude Include="Validator.h" />
     <ClInclude Include="Writer.h" />
   </ItemGroup>
   <ItemGroup>

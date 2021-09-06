@@ -1,3 +1,6 @@
+/*  Move.cpp
+    Used for all move related funcitons, such as from square, to square etc
+*/
 
 #include "Move.h"
 
