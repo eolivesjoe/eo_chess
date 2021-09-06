@@ -1,15 +1,4 @@
-# eoChess
-by Erik Olivesjoe
-
- ## Hobby chess project. started 150321
-
-
-
-         Anyone who attempts to generate random numbers by deterministic means is, of course, living in a state of sin.
-
-        - John von Neumann
-
-
+# EOChess
 
  ### 150321-
 
