@@ -154,3 +154,80 @@ by Erik Olivesjoe
     Clean up some variable names for readability, SQ_120 and SQ_64
 
     Rewrite the pieces and BoardState class to make it less complicated
+
+     ## references:
+
+
+    chess programming wiki:
+
+        https://www.chessprogramming.org/Main_Page
+        
+        https://www.chessprogramming.org/Forsyth-Edwards_Notation
+
+
+    general:
+
+        https://www.youtube.com/playlist?list=PLZ1QII7yudbc-Ky058TEaOstZHVbT-2hg
+
+        https://stackoverflow.com/questions/246564/what-is-the-lifetime-of-a-static-variable-in-a-c-function
+
+        https://en.cppreference.com/w/cpp/language/operator_precedence
+
+        https://www.youtube.com/playlist?list=PLmN0neTso3Jxh8ZIylk74JpwfiWNI76Cs
+
+        https://stackoverflow.com/questions/8480640/how-to-throw-a-c-exception
+
+        https://www.geeksforgeeks.org/sprintf-in-c/
+
+        https://en.cppreference.com/w/cpp/io/c/fprintf
+
+
+    bit boards:
+
+        https://www.chessprogramming.org/Magic_Bitboards
+
+        https://stackoverflow.com/questions/30680559/how-to-find-magic-bitboards
+
+        https://www.youtube.com/watch?v=4ohJQ9pCkHI
+
+
+    bit operations:
+
+        https://librambutan.readthedocs.io/en/latest/lang/cpp/compoundbitwise.html
+
+        https://librambutan.readthedocs.io/en/latest/lang/cpp/bitwisemath.html#lang-bitwisemath
+
+        https://en.wikipedia.org/wiki/Bitwise_operation
+
+        https://en.wikipedia.org/wiki/Mask_%28computing%29
+
+
+    hash number generation:
+
+        https://en.cppreference.com/w/cpp/numeric/random/uniform_int_distribution
+        
+        http://www.cplusplus.com/reference/random/mt19937_64/
+
+        https://stackoverflow.com/questions/14009637/c11-random-numbers
+
+        https://www.geeksforgeeks.org/stduniform_int_distribution-class-in-c/
+
+        https://stackoverflow.com/questions/21328048/using-random-device-in-classes
+
+
+    positioning
+
+        https://en.wikipedia.org/wiki/Forsyth%E2%80%93Edwards_Notation
+
+        https://www.delftstack.com/howto/c/convert-int-to-char/
+
+        http://www.asciitable.com/
+
+        https://stackoverflow.com/questions/21208308/adding-and-subtracting-chars-why-does-this-work
+        
+        https://medium.com/swlh/what-does-subtracting-a-char-from-a-char-mean-79da714c1b3b
+
+
+    move generation
+        
+        https://www.chessprogramming.org/Encoding_Moves
