@@ -138,6 +138,12 @@ by Erik Olivesjoe
 
     Added 'Moves.h' to store a number of moves
 
+### 060921-
+    
+    Moved files to a Visual Studio repo, with gitignore and removed MakeFile
+
+    Updated some formatting
+
  
 ## future goals / notes:
 
