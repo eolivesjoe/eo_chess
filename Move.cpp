@@ -23,3 +23,8 @@ int STRUCT_MOVE::promoted(int move)
 {
     return ((move >> 20) & 0xF);
 }
+
+int STRUCT_MOVE::createMove(int from, int to, int castle, int promotion, int flag)
+{
+    return (from) | ((to) << 7) | ((castle) << 14) | ((promotion) << 20) | (flag);
+}
