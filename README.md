@@ -1,6 +1,5 @@
 # EOChess
- eoChess moved to Visual Studio 2019
- by Erik Olivesjoe
+by Erik Olivesjoe
 
  ## Hobby chess project started in March 2021
 
