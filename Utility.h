@@ -4,6 +4,8 @@
 
 #include <iostream>
 
+#include "Definitions.h"
+
 #ifndef UTILITY_H
 #define UTILITY_H
 
@@ -12,7 +14,18 @@ static bool assertIntegers(int a, int b)
 {
     if (!(a == b)) 
     {
-        std::cerr << "-- Error in assert " << a << " and " << b << std::endl;
+        std::cerr << "-- Error in assert int --  " << a << " and " << b << std::endl;
+        return 1;
+    }
+    return 0;
+}
+
+// assert two booleans
+static bool assertBool(bool a)
+{
+    if (!(a == true))
+    {
+        std::cerr << "-- Error in assert bool --  " << a << std::endl;
         return 1;
     }
     return 0;

@@ -398,7 +398,7 @@ void Board::initFileAndRankCheck()
     }
 }
 
-bool Board::checkBoard(STRUCT_BOARD_STATE* state, Pieces* pieces) 
+bool Board::checkBoard(STRUCT_BOARD_STATE* state) 
 {
     int tempPiece = 0;
     int square64 = 0;

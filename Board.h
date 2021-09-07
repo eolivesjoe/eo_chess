@@ -37,7 +37,7 @@ public:
     void updateMaterialLists(STRUCT_BOARD_STATE* state, Pieces* pieces, BitBoard* bitBoard);
 
     // check that the board is correct after a change
-    bool checkBoard(STRUCT_BOARD_STATE* state, Pieces* pieces);
+    bool checkBoard(STRUCT_BOARD_STATE* state);
 
     // getters
     int* getSq120To64();

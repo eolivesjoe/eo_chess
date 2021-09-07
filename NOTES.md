@@ -137,8 +137,20 @@
 
     Time to start move generation
 
+### 060921-
+
+    Begun move generation with white pawns
+
+### 070921-
+
+    Separated assertbool and assertInt for checking positions
+
+    Added white pawn moves to generator
+
  
 ## future goals / notes:
+
+    Condense some of the struct files into more readable option
 
     finish check board function!!
 
@@ -154,8 +166,9 @@
 
     Rewrite the pieces and BoardState class to make it less complicated
 
-     ## references:
 
+
+     ## references:
 
     chess programming wiki:
 

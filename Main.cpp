@@ -5,6 +5,7 @@
 #include <iostream>
 #include <iomanip>
 
+#include "Utility.h"
 #include "Definitions.h"
 #include "Writer.h"
 #include "Board.h"
@@ -66,7 +67,7 @@ void run()
 
     std::cout << "\n";
 
-    board->checkBoard(state, pieces);
+    board->checkBoard(state);
 
     w->printAttackedSquares(board, WHITE, state, attack, pieces);
 
@@ -92,6 +93,8 @@ void run()
     std::cout << "Algebraic from: " << w->printSquare(from, board) << "\n";
     std::cout << "Algebraic to: " << w->printSquare(to, board) << "\n";
     std::cout << "Algebraic Move: " << w->printMove(move, m, board, pieces) << "\n";
+
+    assertBool(board->checkBoard(state));
 
     delete state;
     delete board;

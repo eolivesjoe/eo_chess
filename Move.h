@@ -25,7 +25,7 @@ struct STRUCT_MOVE
     // was a piece promoted
     int promoted(int move);
 
-    // create move int using from, to, castle, promotion and flag
+    // create move int using from, to, castle, promotion and flag using bitwise OR
     int createMove(int from, int to, int castle, int promotion, int flag);
 };
 

@@ -22,7 +22,8 @@ bool Attack::squareAttacked(Board* board, const int square, const int side, STRU
     // checks
     isSquareOnBoard(board->getFileOnBoard()[square]);
     isSideValid(side);
-    board->checkBoard(boardState, pieces);
+    assertBool(board->checkBoard(boardState));
+
     
 
     // pawns

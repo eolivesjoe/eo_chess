@@ -22,7 +22,8 @@ public:
 
 	void AddEnPassantMove(const STRUCT_BOARD_STATE* boardState, int move, STRUCT_MOVELIST* moveList);
 
-	void generateAllMoves(const STRUCT_BOARD_STATE* boardState, STRUCT_MOVELIST* moveList);
+	void generateAllMoves(STRUCT_BOARD_STATE* boardState, STRUCT_MOVELIST* moveList, STRUCT_MOVE* move,
+		Board* board, const int from, const int to, const int capture);
 
 	void addWhitePawnCaptureMove(const STRUCT_BOARD_STATE* boardState, STRUCT_MOVELIST* moveList, STRUCT_MOVE* move,
 		Board* board, const int from, const int to, const int capture);
