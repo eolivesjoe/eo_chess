@@ -56,10 +56,10 @@ struct  STRUCT_BOARD_STATE
 
     U64 positionKey;
 
-    // indexing by piece type used to get number of each piece
+    // store number of each type of piece
     int pieceNumber[PIECE_TYPE];
 
-    // store piece type and how many of that piece
+    // store square for each piece per piece type
     int pieceList[PIECE_TYPE][PIECE_NUMBER];
 
     // store anything that isn't a pawn for white, black and both

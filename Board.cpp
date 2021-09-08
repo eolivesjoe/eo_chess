@@ -122,6 +122,7 @@ int Board::readFENString(const char* fen, STRUCT_BOARD_STATE* state, HashKey* ke
     checkFENString(fen, state);
 
     resetBoard(state);
+    checkBoard(state);
 
     int rank = RANK_8;
     int file = FILE_A;
@@ -435,24 +436,26 @@ bool Board::checkBoard(STRUCT_BOARD_STATE* state)
         tempPiece = state->pieces[square120];
         tempPieceNumber[tempPiece]++;
 
-        if (state->majorPieces[tempPiece])
-        {
-            tempMajorPieces[tempPiece]++;
-        }
 
-        if (state->bigPieces[tempPiece]) 
-        {
-            tempBigPieces[tempPiece]++;
-        }
+        // TODO: Replace majP[colour]
+        //if (state->majorPieces[tempPiece])
+        //{
+        //    tempMajorPieces[tempPiece]++;
+        //}
 
-        if (state->minorPieces[tempPiece]) 
-        {
-            tempMinorPieces[tempPiece]++;
-        }
+        //if (state->bigPieces[tempPiece]) 
+        //{
+        //    tempBigPieces[tempPiece]++;
+        //}
 
-        // TODO: 
-        // used later for the piece values
-        // tempMaterial[colour] += PieceVal
+        //if (state->minorPieces[tempPiece]) 
+        //{
+        //    tempMinorPieces[tempPiece]++;
+        //}
+
+         //TODO: 
+         //used later for the piece values
+         //tempMaterial[colour] += PieceVal
     }
 
     // check piecenumber array

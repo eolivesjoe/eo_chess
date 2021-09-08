@@ -32,53 +32,54 @@ static bool assertBool(bool a)
 }
 
 // check if square is on the board
-static int isSquareOnBoard(const int square)
+static bool sqOnBoard(const int square)
 {
-    if (square != NO_SQUARE)
+    if (square == NO_SQUARE)
     {
-        return 0;
+        std::cerr << "-- Square is not on board --  " << square << std::endl;
+        return false;
     }
-    return 1;
+    return true;
 }
 
-// check if side is valid
-static int isSideValid(const int side)
-{
-    if (side == WHITE || side == BLACK)
-    {
-        return 0;
-    }
-    return 1;
-}
-
-// check if piece is empty or valid
-static int isPieceValidOrEmpty(const int piece)
-{
-    if (piece >= NO_PIECE || piece <= bK)
-    {
-        return 0;
-    }
-    return 1;
-}
-
-// check if piece is valid
-static int isPieceValid(const int piece)
-{
-    if (piece >= wP || piece <= bK)
-    {
-        return 0;
-    }
-    return 1;
-}
-
-// check if rank and file is valid
-static int isRankAndFileValid(const int rankfile)
-{
-    if (rankfile >= 0 || rankfile <= 7)
-    {
-        return 0;
-    }
-    return 1;
-}
+//// check if side is valid
+//static bool isSideValid(const int side)
+//{
+//    if (!side == WHITE || !side == BLACK)
+//    {
+//        return false;
+//    }
+//    return true;
+//}
+//
+//// check if piece is empty or valid
+//static bool isPieceValidOrEmpty(const int piece)
+//{
+//    if (!piece >= NO_PIECE && !piece <= bK)
+//    {
+//        return false;
+//    }
+//    return true;
+//}
+//
+//// check if piece is valid
+//static bool isPieceValid(const int piece)
+//{
+//    if (!piece >= wP && !piece <= bK)
+//    {
+//        return false;
+//    }
+//    return true;
+//}
+//
+//// check if rank and file is valid
+//static bool isRankAndFileValid(const int rankfile)
+//{
+//    if (!rankfile >= 0 || !rankfile <= 7)
+//    {
+//        return false;
+//    }
+//    return true;
+//}
 
 #endif // UTILITY_H

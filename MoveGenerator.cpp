@@ -42,31 +42,84 @@ void MoveGenerator::addWhitePawnCaptureMove(const STRUCT_BOARD_STATE* boardState
 	// if we're on rank 7, add the options to promote white pawns
 	if (board->getRankOnBoard()[from] == RANK_7)
 	{
-		// capture moves
 		AddCaptureMove(boardState, move->createMove(from, to, capture, wQ, 0), moveList);
 		AddCaptureMove(boardState, move->createMove(from, to, capture, wR, 0), moveList);
 		AddCaptureMove(boardState, move->createMove(from, to, capture, wN, 0), moveList);
 		AddCaptureMove(boardState, move->createMove(from, to, capture, wB, 0), moveList);
+	}
+	else
+	{
+		AddCaptureMove(boardState, move->createMove(from, to, capture, NO_PIECE, 0), moveList);
+	}
+}
 
-		// non capture moves
+// non capture moves for white pawns
+void MoveGenerator::addWhitePawnMove(const STRUCT_BOARD_STATE* boardState, STRUCT_MOVELIST* moveList, STRUCT_MOVE* move,
+	Board* board, const int from, const int to)
+{
+	// if we're on rank 7, add the options to promote white pawns
+	if (board->getRankOnBoard()[from] == RANK_7)
+	{
 		AddQuietMove(boardState, move->createMove(from, to, NO_PIECE, wQ, 0), moveList);
 		AddQuietMove(boardState, move->createMove(from, to, NO_PIECE, wR, 0), moveList);
 		AddQuietMove(boardState, move->createMove(from, to, NO_PIECE, wN, 0), moveList);
 		AddQuietMove(boardState, move->createMove(from, to, NO_PIECE, wB, 0), moveList);
+	} 
+	else 
+	{
+		AddCaptureMove(boardState, move->createMove(from, to, NO_PIECE, NO_PIECE, 0), moveList);
 	}
-	// capture move
-	AddCaptureMove(boardState, move->createMove(from, to, capture, NO_PIECE, 0), moveList);
-	
-	// non capture move
-	AddCaptureMove(boardState, move->createMove(from, to, NO_PIECE, NO_PIECE, 0), moveList);
 }
 
 void MoveGenerator::generateAllMoves(STRUCT_BOARD_STATE* boardState, STRUCT_MOVELIST* moveList, STRUCT_MOVE* move,
-	Board* board, const int from, const int to, const int capture)
+	Board* board, Pieces* pieces)
 {
 	assertBool(board->checkBoard(boardState));
 	moveList->count = 0;
 
-	// white pawns
+	int square = 0;
 
+	// white pawns
+	if (boardState->sideToMove == WHITE)
+	{
+		for (int i = 0; i != boardState->pieceNumber[wP]; ++i)
+		{
+			square = boardState->pieceList[wP][i];
+
+			//check
+			sqOnBoard(board->getFileOnBoard()[square]);
+
+			// add pawn move if there's a free square in front of the pawn
+			if (boardState->pieces[square + 10] == NO_PIECE)
+			{
+				addWhitePawnMove(boardState, moveList, move, board, square, square + 10);
+
+				// add pawn start move if there's a free square two squares in front of a pawn that hasn't moved
+				if (board->getRankOnBoard()[square] == RANK_2 && boardState->pieces[square + 20] == NO_PIECE)
+				{
+					AddQuietMove(boardState, move->createMove(square, square + 20, 0, 0, moveFlagPawnStart), moveList);
+				}
+			}
+
+			// add capture moves for white pawns
+			if (sqOnBoard(square + 9) && pieces->getPieceColour()[boardState->pieces[square + 9]] == BLACK)
+			{
+				addWhitePawnCaptureMove(boardState, moveList, move, board, square, square + 9, boardState->pieces[square + 9]);
+			}
+			if (sqOnBoard(square + 11) && pieces->getPieceColour()[boardState->pieces[square + 11]] == BLACK)
+			{
+				addWhitePawnCaptureMove(boardState, moveList, move, board, square, square + 11, boardState->pieces[square + 11]);
+			}
+
+			// add en passant moves
+			if (sqOnBoard(square + 9) && square + 9 == boardState->enPassant)
+			{
+				AddEnPassantMove(boardState, move->createMove(square, square + 9, 0, 0, moveFlagEnPassant), moveList);
+			}
+			else if (sqOnBoard(square + 11) && square + 11 == boardState->enPassant)
+			{
+				AddEnPassantMove(boardState, move->createMove(square, square + 11, 0, 0, moveFlagEnPassant), moveList);
+			}
+		}
+	}
 }

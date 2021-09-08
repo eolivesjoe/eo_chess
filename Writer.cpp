@@ -212,7 +212,7 @@ void Writer::printMoveList(STRUCT_MOVELIST* moveList, STRUCT_MOVE* m, Board* boa
         int move = moveList->moves[i].move;
         int score = moveList->moves[i].moveScore;
 
-        std::cout << "Move: " << i << " < " << printMove(move, m, board, pieces) << " score: " << score << "\n";
+        std::cout << "Move: " << i + 1 << " < " << printMove(move, m, board, pieces) << " score: " << score << "\n";
     }
     std::cout << "Total moves: " << moveList->count << "\n";
 }

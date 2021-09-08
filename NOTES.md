@@ -1,18 +1,18 @@
 # EOChess
 
- ### 150321-
+### 150321-
 
     Started project. Wrote defs and a few notes.
 
 
- ### 230521-
+### 230521-
 
     Have initialised board, able to print both 64 board for playing and 120 for checking allowed move.
 
     Started investigating biboards for pawn movement.
 
 
- ### 240521-
+### 240521-
 
     Pawn setting and checking working for bitboard.
 
@@ -31,7 +31,7 @@
     Should work on piece positioning next.
 
 
- ### 250521-
+### 250521-
 
     Created hash keys for pieces, side and castling. 
 
@@ -146,6 +146,24 @@
     Separated assertbool and assertInt for checking positions
 
     Added white pawn moves to generator
+
+### 080921-
+    
+    More move generation in white pawns
+
+    Big help from Bluefever Software, buy him a coffee!
+
+### 080921-
+
+    Must complete checkBoard to avoid index errors
+
+    Double check util functions to make sure everything is checked properly
+
+    White pawns might need a few more checks but looks OK
+
+    Add more checks in anything that modifies squares, no more index errors
+
+    Should start adding dates to future goals!
 
  
 ## future goals / notes:
