@@ -50,10 +50,11 @@ void run()
     // const char* queenAttackCheck = "8/8/3q4/8/8/3Q4/8/8 w KQkq - 0 1";
     // const char* kingAttackCheck = "8/8/3k4/8/8/3K4/8/8 w KQkq - 0 1";
     // const char* blockTest = "8/3q1p2/8/3Q1P2/8/8/8/8 w KQkq - 0 1";
-    const char* PAWNTEST = "rnbqkb1r/pp1p1pPp/8/2p1pP2/1P1P4/3P3P/P1P1P3/RNBQKBNR w KQkq e6 0 1";
+    const char* PAWNTESTW = "rnbqkb1r/pp1p1pPp/8/2p1pP2/1P1P4/3P3P/P1P1P3/RNBQKBNR w KQkq e6 0 1";
+    const char* PAWNTESTB = "rnbqkbnr/p1p1p3/3p3p/1p1p4/2P1Pp2/8/PP1P1PpP/RNBQKB1R b KQkq e3 0 1";
 
     std::cout << "STANDARD BOARD\n";
-    board->readFENString(PAWNTEST, boardState, key, pieces, bitBoard);
+    board->readFENString(PAWNTESTB, boardState, key, pieces, bitBoard);
     w->printBoard(board, boardState);
 
     std::cout << "\n";

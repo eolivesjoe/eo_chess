@@ -34,8 +34,16 @@ public:
 	void addWhitePawnCaptureMove(const STRUCT_BOARD_STATE* boardState, STRUCT_MOVELIST* moveList, STRUCT_MOVE* move,
 		Board* board, const int from, const int to, const int capture);
 
+	// BP capture moves
+	void addBlackPawnCaptureMove(const STRUCT_BOARD_STATE* boardState, STRUCT_MOVELIST* moveList, STRUCT_MOVE* move,
+		Board* board, const int from, const int to, const int capture);
+
 	// WP non capture moves
 	void addWhitePawnMove(const STRUCT_BOARD_STATE* boardState, STRUCT_MOVELIST* moveList, STRUCT_MOVE* move,
+		Board* board, const int from, const int to);
+
+	// BP non capture moves
+	void addBlackPawnMove(const STRUCT_BOARD_STATE* boardState, STRUCT_MOVELIST* moveList, STRUCT_MOVE* move,
 		Board* board, const int from, const int to);
 
 private:

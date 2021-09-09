@@ -6,7 +6,6 @@
 #define moveFlagPawnStart 0x80000
 #define moveFlagCastle 0x1000000
 #define moveFlagCapture 0x7C000
-#define moveFlagPromotion 0xF00000
 
 struct STRUCT_MOVE 
 {
