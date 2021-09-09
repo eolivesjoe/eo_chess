@@ -102,21 +102,21 @@ void MoveGenerator::generateAllMoves(STRUCT_BOARD_STATE* boardState, STRUCT_MOVE
 			}
 
 			// add capture moves for white pawns
-			if (sqOnBoard(square + 9) && pieces->getPieceColour()[boardState->pieces[square + 9]] == BLACK)
+			if (sqOnBoard(board->getFileOnBoard()[square + 9]) && pieces->getPieceColour()[boardState->pieces[square + 9]] == BLACK)
 			{
 				addWhitePawnCaptureMove(boardState, moveList, move, board, square, square + 9, boardState->pieces[square + 9]);
 			}
-			if (sqOnBoard(square + 11) && pieces->getPieceColour()[boardState->pieces[square + 11]] == BLACK)
+			if (sqOnBoard(board->getFileOnBoard()[square + 11]) && pieces->getPieceColour()[boardState->pieces[square + 11]] == BLACK)
 			{
 				addWhitePawnCaptureMove(boardState, moveList, move, board, square, square + 11, boardState->pieces[square + 11]);
 			}
 
 			// add en passant moves
-			if (sqOnBoard(square + 9) && square + 9 == boardState->enPassant)
+			if (sqOnBoard(board->getFileOnBoard()[square + 9]) && square + 9 == boardState->enPassant)
 			{
 				AddEnPassantMove(boardState, move->createMove(square, square + 9, 0, 0, moveFlagEnPassant), moveList);
 			}
-			else if (sqOnBoard(square + 11) && square + 11 == boardState->enPassant)
+			else if (sqOnBoard(board->getFileOnBoard()[square + 11]) && square + 11 == boardState->enPassant)
 			{
 				AddEnPassantMove(boardState, move->createMove(square, square + 11, 0, 0, moveFlagEnPassant), moveList);
 			}

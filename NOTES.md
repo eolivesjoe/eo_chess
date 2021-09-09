@@ -148,12 +148,8 @@
     Added white pawn moves to generator
 
 ### 080921-
-    
-    More move generation in white pawns
 
     Big help from Bluefever Software, buy him a coffee!
-
-### 080921-
 
     Must complete checkBoard to avoid index errors
 
@@ -164,6 +160,12 @@
     Add more checks in anything that modifies squares, no more index errors
 
     Should start adding dates to future goals!
+
+### 090921-
+
+    Utililty.h works properly without warnings
+
+    MoveGeneration for white pawns works as expected
 
  
 ## future goals / notes:
