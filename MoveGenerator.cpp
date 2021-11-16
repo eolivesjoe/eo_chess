@@ -40,6 +40,10 @@ void MoveGenerator::AddEnPassantMove(const STRUCT_BOARD_STATE* boardState, int m
 void MoveGenerator::addWhitePawnMove(const STRUCT_BOARD_STATE* boardState, STRUCT_MOVELIST* moveList, STRUCT_MOVE* move,
 	Board* board, const int from, const int to)
 {
+	// checks
+	sqOnBoard(from);
+	sqOnBoard(to);
+
 	// if we're on rank 7, add the options to promote white pawns
 	if (board->getRankOnBoard()[from] == RANK_7)
 	{
@@ -57,6 +61,11 @@ void MoveGenerator::addWhitePawnMove(const STRUCT_BOARD_STATE* boardState, STRUC
 void MoveGenerator::addWhitePawnCaptureMove(const STRUCT_BOARD_STATE* boardState, STRUCT_MOVELIST* moveList, STRUCT_MOVE* move,
 	Board* board, const int from, const int to, const int capture)
 {
+	// checks
+	isPieceValidOrEmpty(capture);
+	sqOnBoard(from);
+	sqOnBoard(to);
+
 	// if we're on rank 7, add the options to promote white pawns
 	if (board->getRankOnBoard()[from] == RANK_7)
 	{
@@ -75,6 +84,10 @@ void MoveGenerator::addWhitePawnCaptureMove(const STRUCT_BOARD_STATE* boardState
 void MoveGenerator::addBlackPawnMove(const STRUCT_BOARD_STATE* boardState, STRUCT_MOVELIST* moveList, STRUCT_MOVE* move,
 	Board* board, const int from, const int to)
 {
+	// checks
+	sqOnBoard(from);
+	sqOnBoard(to);
+
 	// if we're on rank 2, add the options to promote black pawns
 	if (board->getRankOnBoard()[from] == RANK_2)
 	{
@@ -92,6 +105,11 @@ void MoveGenerator::addBlackPawnMove(const STRUCT_BOARD_STATE* boardState, STRUC
 void MoveGenerator::addBlackPawnCaptureMove(const STRUCT_BOARD_STATE* boardState, STRUCT_MOVELIST* moveList, STRUCT_MOVE* move,
 	Board* board, const int from, const int to, const int capture)
 {
+	// checks
+	isPieceValidOrEmpty(capture);
+	sqOnBoard(from);
+	sqOnBoard(to);
+
 	// if we're on rank 2, add the options to promote black pawns
 	if (board->getRankOnBoard()[from] == RANK_2)
 	{
@@ -116,9 +134,9 @@ void MoveGenerator::generateAllMoves(STRUCT_BOARD_STATE* boardState, STRUCT_MOVE
 
 	int square = 0;
 
-	// white pawns
 	if (boardState->sideToMove == WHITE)
 	{
+		// white pawns
 		for (int i = 0; i != boardState->pieceNumber[wP]; ++i)
 		{
 			square = boardState->pieceList[wP][i];
@@ -160,9 +178,9 @@ void MoveGenerator::generateAllMoves(STRUCT_BOARD_STATE* boardState, STRUCT_MOVE
 		}
 	}
 
-	// black pawns
 	if (boardState->sideToMove == BLACK)
 	{
+		// black pawns
 		for (int i = 0; i != boardState->pieceNumber[bP]; ++i)
 		{
 			square = boardState->pieceList[bP][i];
@@ -203,4 +221,10 @@ void MoveGenerator::generateAllMoves(STRUCT_BOARD_STATE* boardState, STRUCT_MOVE
 			}
 		}
 	}
+
+	// sliding pieces (bishop, rook, queen)
+
+
+
+	// non sliding pieces
 }

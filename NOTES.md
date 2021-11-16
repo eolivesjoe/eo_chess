@@ -167,6 +167,10 @@
 
     MoveGeneration for white pawns works as expected
 
+### 171121-
+    
+    Begun work on move generation for sliding pieces
+
  
 ## future goals / notes:
 

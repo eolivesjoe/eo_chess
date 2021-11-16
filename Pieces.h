@@ -34,6 +34,16 @@ private:
     int pieceRookOrQueen[13] = { false, false, false, false, true, true, false, false, false, false, true, true, false };
     int pieceKing[13] = { false, false, false, false, false, false, true, false, false, false, false, false, true };
 
+    // check sliding piece
+    int slidingPiece[13] = { false, false, false, true, true, true, false, false, false, true, true, true, false };
+    int loopSlidingPieces[8] = { wB, wR, wQ, 0, bB, bR, bQ, 0 };
+    int loopSlidingIndex[2] = { 0, 4 };
+
+    // check non-sliding piece
+    int nonSlidingPiece[13] = { true, true, true, false, false, false, true, true, true, false, false, false, true };
+    int loopNonSlidingPieces[8] = { wN, wK, 0, bN, bK, 0 };
+    int loopNonSlidingIndex[2] = { 0, 3 };
+
     // used to match colour of the piece to the boardPieces enum
     int pieceColour[13] = { BOTH, WHITE, WHITE, WHITE, WHITE, WHITE, WHITE,
                            BLACK, BLACK, BLACK, BLACK, BLACK, BLACK };
