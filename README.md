@@ -1,4 +1,4 @@
-# EOChess
+# eoChess
 by Erik Olivesjoe
 
  ## Hobby chess project started in March 2021
