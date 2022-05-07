@@ -5,10 +5,10 @@
 #ifndef MOVES_H
 #define MOVES_H
 
-#include "Definitions.h"
-#include "Move.h"
+#include "definitions.h"
+#include "move.h"
 
-struct STRUCT_MOVELIST 
+struct STRUCT_MOVE_LIST
 {
     STRUCT_MOVE moves[MAX_POSITION_MOVES];
     int count;

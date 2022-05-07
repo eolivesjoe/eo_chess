@@ -3,10 +3,10 @@
 
 #include <random>
 
-#include "Definitions.h"
-#include "BoardState.h"
+#include "definitions.h"
+#include "board_state.h"
 
-class HashKey 
+class HashKey
 {
 public:
 
@@ -33,13 +33,13 @@ private:
     std::mt19937& generator();
 
     // pieces and index on board square 
-    U64 pieceHashKeys[PIECE_TYPE][SQ_120];
+    U64 piece_hash_keys[PIECE_TYPE][SQ_120];
 
     // hash in rand number if white is to move
-    U64 sideHashKey;
+    U64 side_hash_key;
 
     // castle keys, 0 2 4 8, for queen and king on each side
-    U64 castleKeys[16];
+    U64 castle_keys[16];
 };
 
 #endif //HASHKEY_H

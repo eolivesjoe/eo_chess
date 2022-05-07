@@ -1,6 +1,8 @@
 #ifndef DEFINITIONS_H
 #define DEFINITIONS_H
 
+#include <string>
+
 #define U64 unsigned long long
 
 // 1024 max moves
@@ -14,13 +16,12 @@
 
 #define SQ_64 64
 #define SQ_120 120
-#define INVALID_SQ -1
 
 #define PIECE_TYPE 13
 #define PIECE_NUMBER 10
 
 // board ranks
-enum boardRanks 
+enum boardRanks
 {
     RANK_1,
     RANK_2,
@@ -34,7 +35,7 @@ enum boardRanks
 };
 
 // board files
-enum boardFiles 
+enum boardFiles
 {
     FILE_A,
     FILE_B,
@@ -48,25 +49,25 @@ enum boardFiles
 };
 
 //pieces
-enum boardPieces 
+enum boardPieces
 {
     NO_PIECE,
-    wP,
-    wN,
-    wB,
-    wR,
-    wQ,
-    wK,
-    bP,
-    bN,
-    bB,
-    bR,
-    bQ,
-    bK
+    WHITE_PAWN,
+    WHITE_KNIGHT,
+    WHITE_BISHOP,
+    WHITE_ROOK,
+    WHITE_QUEEN,
+    WHITE_KING,
+    BLACK_PAWN,
+    BLACK_KNIGHT,
+    BLACK_BISHOP,
+    BLACK_ROOK,
+    BLACK_QUEEN,
+    BLACK_KING
 };
 
 // piece colours
-enum pieceColours 
+enum pieceColours
 {
     WHITE,
     BLACK,
@@ -74,7 +75,7 @@ enum pieceColours
 };
 
 //board squares
-enum squares 
+enum squares
 {
     A1 = 21, B1, C1, D1, E1, F1, G1, H1,
     A2 = 31, B2, C2, D2, E2, F2, G2, H2,
@@ -87,12 +88,12 @@ enum squares
     NO_SQUARE
 };
 
-enum castling 
+enum castling
 {
-    wKCastling = 1,
-    wQCastling = 2,
-    bKCastling = 4,
-    bQCastling = 8
+    WHITE_KING_CASTLING = 1,
+    WHITE_QUEEN_CASTLING = 2,
+    BLACK_KING_CASTLING = 4,
+    BLACK_QUEEN_CASTLING = 8
 };
 
 #endif // DEFINITIONS_H

@@ -1,13 +1,13 @@
 #ifndef BOARD_H
 #define BOARD_H
 
-#include "Definitions.h"
-#include "BoardState.h"
-#include "HashKey.h"
-#include "Pieces.h"
-#include "BitBoard.h"
+#include "definitions.h"
+#include "board_state.h"
+#include "hash_key.h"
+#include "pieces.h"
+#include "bit_board.h"
 
-class Board 
+class Board
 {
 public:
 
@@ -31,10 +31,10 @@ public:
     bool checkFENString(const char* fen, STRUCT_BOARD_STATE* state);
 
     // read in position string
-    int readFENString(const char* fen, STRUCT_BOARD_STATE* state, HashKey* key, Pieces* pieces, BitBoard* bitBoard);
+    int readFENString(const char* fen, STRUCT_BOARD_STATE* state, HashKey* hash_key, Pieces* pieces, BitBoard* bit_board);
 
     // update all lists containing material information
-    void updateMaterialLists(STRUCT_BOARD_STATE* state, Pieces* pieces, BitBoard* bitBoard);
+    void updateMaterialLists(STRUCT_BOARD_STATE* state, Pieces* pieces, BitBoard* bit_board);
 
     // check that the board is correct after a change
     bool checkBoard(STRUCT_BOARD_STATE* state);
@@ -48,12 +48,12 @@ public:
 private:
 
     // 120 and 64 square arrays used for the board
-    int sq120to64[SQ_120];
-    int sq64to120[SQ_64];
+    int square_120_to_64[SQ_120];
+    int square_64_to_120[SQ_64];
 
     // used to find which rank and file the square is on
-    int fileOnBoard[SQ_120];
-    int rankOnBoard[SQ_120];
+    int file_on_board[SQ_120];
+    int rank_on_board[SQ_120];
 
 };
 

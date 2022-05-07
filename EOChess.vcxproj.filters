@@ -15,69 +15,72 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
+    <ClCompile Include="main.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Attack.cpp">
+    <ClCompile Include="attack.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BitBoard.cpp">
+    <ClCompile Include="bit_board.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Board.cpp">
+    <ClCompile Include="board.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="HashKey.cpp">
+    <ClCompile Include="hash_key.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Move.cpp">
+    <ClCompile Include="move.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MoveGenerator.cpp">
+    <ClCompile Include="move_generator.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Pieces.cpp">
+    <ClCompile Include="pieces.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Writer.cpp">
+    <ClCompile Include="writer.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="utility.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Attack.h">
+    <ClInclude Include="attack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="BitBoard.h">
+    <ClInclude Include="bit_board.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Board.h">
+    <ClInclude Include="board.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="BoardState.h">
+    <ClInclude Include="board_state.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Definitions.h">
+    <ClInclude Include="definitions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="HashKey.h">
+    <ClInclude Include="hash_key.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MoveGenerator.h">
+    <ClInclude Include="move_generator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Move.h">
+    <ClInclude Include="move.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Moves.h">
+    <ClInclude Include="moves.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Pieces.h">
+    <ClInclude Include="pieces.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Utility.h">
+    <ClInclude Include="utility.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Writer.h">
+    <ClInclude Include="writer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -3,14 +3,14 @@
 
 #include <iostream>
 
-#include "Board.h"
-#include "BoardState.h"
-#include "Attack.h"
-#include "Pieces.h"
-#include "Move.h"
-#include "Moves.h"
+#include "board.h"
+#include "board_state.h"
+#include "attack.h"
+#include "pieces.h"
+#include "move.h"
+#include "moves.h"
 
-class Writer 
+class Writer
 {
 public:
 
@@ -23,7 +23,7 @@ public:
     void print64Board(Board* board);
 
     // prints bit board
-    void printBitBoard(BitBoard* bitBoard, Board* board, U64& pieceBitBoard);
+    void printBitBoard(BitBoard* bit_board, Board* board, U64& piece_bit_board);
 
     // print chess board
     void printBoard(Board* board, STRUCT_BOARD_STATE* state);
@@ -38,14 +38,14 @@ public:
     char* printMove(const int move, STRUCT_MOVE* m, Board* board, Pieces* pieces);
 
     // print move list
-    void printMoveList(STRUCT_MOVELIST* moveList, STRUCT_MOVE* m, Board* board, Pieces* pieces);
+    void printMoveList(STRUCT_MOVE_LIST* move_list, STRUCT_MOVE* m, Board* board, Pieces* pieces);
 
 private:
 
-    const char* pieceChar;
-    const char* sideChar;
-    const char* rankChar;
-    const char* fileChar;
+    const char* piece_char;
+    const char* side_char;
+    const char* rank_char;
+    const char* file_char;
 
 };
 

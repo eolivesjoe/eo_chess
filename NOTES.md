@@ -171,12 +171,70 @@
     
     Begun work on move generation for sliding pieces
 
+### 100122-
+
+    Updated makefile
+
+    remember to turn on Wno-unused functions after fixing utility.h!
+
+### 200122-
+
+    Fixed inaccurate naming conventions, added a few notes for future TODOs.
+
+### 230222-
+
+    Minor work on adding moves for sliding pieces.
+
+    Continue to work on non-sliding pieces for move generation, continue in pieces.h
  
-## future goals / notes:
+### 240222-
+
+    Updated README with some more information.
+
+### 010322-
+
+    Updated arrays with piece directions.
+
+### 060322-
+
+    Move generation for non-sliding pieces almost done.
+
+    Updated some redundant functions.
+
+### 070322-
+
+    Logic for generating sliding piece moves implemented.
+
+    Changed Utility from static to free functions. Removed 'Wno-unused functions' from makefile
+
+### 120322-
+
+    White kingside castling implemented.
+
+### 160322-
+
+    White queenside castling implemented.
+
+### 230322-
+
+    All castling checks implemented except for king danger.
+
+### 290322-
+    
+    Move generation looks to be working.
+
+    TODO: Additional testing for edge cases.
+	
+### 080522-
+	
+	Updated for Visual studio
+
+
+## future goals / TODO:
 
     Condense some of the struct files into more readable option
 
-    finish check board function!!
+    finish check board function!
 
     Turn everything into bit boards
 
@@ -190,9 +248,12 @@
 
     Rewrite the pieces and BoardState class to make it less complicated
 
+    Remember to clean up assertSquare to deal with square values that arent 99! Look at non sliding
+    pieces in move_generator.
 
 
-     ## references:
+
+## references:
 
     chess programming wiki:
 
@@ -216,6 +277,8 @@
         https://www.geeksforgeeks.org/sprintf-in-c/
 
         https://en.cppreference.com/w/cpp/io/c/fprintf
+
+        https://stackoverflow.com/questions/8067394/static-helper-class
 
 
     bit boards:
