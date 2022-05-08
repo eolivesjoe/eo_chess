@@ -229,6 +229,8 @@
 	
 	Updated for Visual studio
 
+	Updated file name extensions from .cc to .cpp
+
 
 ## future goals / TODO:
 

@@ -15,34 +15,34 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cc">
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="attack.cc">
+    <ClCompile Include="attack.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="bit_board.cc">
+    <ClCompile Include="bit_board.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="board.cc">
+    <ClCompile Include="board.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="hash_key.cc">
+    <ClCompile Include="hash_key.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="move.cc">
+    <ClCompile Include="move.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="move_generator.cc">
+    <ClCompile Include="move_generator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="pieces.cc">
+    <ClCompile Include="pieces.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="writer.cc">
+    <ClCompile Include="writer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="utility.cc">
+    <ClCompile Include="utility.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

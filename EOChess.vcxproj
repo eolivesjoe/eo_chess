@@ -140,16 +140,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="attack.cc" />
-    <ClCompile Include="bit_board.cc" />
-    <ClCompile Include="board.cc" />
-    <ClCompile Include="hash_key.cc" />
-    <ClCompile Include="main.cc" />
-    <ClCompile Include="move.cc" />
-    <ClCompile Include="move_generator.cc" />
-    <ClCompile Include="pieces.cc" />
-    <ClCompile Include="utility.cc" />
-    <ClCompile Include="writer.cc" />
+    <ClCompile Include="attack.cpp" />
+    <ClCompile Include="bit_board.cpp" />
+    <ClCompile Include="board.cpp" />
+    <ClCompile Include="hash_key.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="move.cpp" />
+    <ClCompile Include="move_generator.cpp" />
+    <ClCompile Include="pieces.cpp" />
+    <ClCompile Include="utility.cpp" />
+    <ClCompile Include="writer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="attack.h" />
