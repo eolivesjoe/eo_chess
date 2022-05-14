@@ -231,6 +231,10 @@
 
 	Updated file name extensions from .cc to .cpp
 
+### 1410522-
+
+    Updated project name
+
 
 ## future goals / TODO:
 
