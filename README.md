@@ -56,7 +56,3 @@ Build a working pvp chess game in c++ using various information and references f
 ### Milestone 2
  
 Convert it into a pve engine that you can play against.
-
-### Milestone 3
- 
-Continue to develop my chess engine to become a better opponent, and change all pieces into bitboards.
